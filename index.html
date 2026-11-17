@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#24142f">
+<meta name="description" content="A little enchanted world made with love for Salina — National Princess Day.">
+<title>For My Princess, Salina ♡</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
+<style>
+:root{--night:#21132e;--plum:#382044;--rose:#f5a9c6;--pink:#ffd5e4;--cream:#fff4ee;--gold:#f5d49a;--muted:#e9cddd;--glass:rgba(255,239,248,.085)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:82px}
+body{margin:0;background:var(--night);color:var(--cream);font-family:"DM Sans",sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;z-index:-3;background:radial-gradient(ellipse at 12% 8%,#71446f 0,transparent 38%),radial-gradient(ellipse at 88% 24%,#61364f 0,transparent 34%),radial-gradient(ellipse at 50% 90%,#392344 0,transparent 55%),linear-gradient(145deg,#1b1128,#30203c 55%,#1c142c)}
+body:after{content:"";position:fixed;inset:0;z-index:-2;opacity:.23;pointer-events:none;background-image:radial-gradient(#fff 0.7px,transparent .8px);background-size:47px 47px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.topbar{position:fixed;z-index:20;top:0;left:0;right:0;padding:13px 5vw;display:flex;justify-content:space-between;align-items:center;background:linear-gradient(#21132fe8,#21132f9c,transparent);backdrop-filter:blur(10px)}
+.brand{font-family:"Playfair Display",serif;letter-spacing:.08em;font-size:14px;color:#ffe3ed}
+.brand span{color:var(--gold)}
+.nav{display:flex;gap:22px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#f4dce9}
+.nav a{opacity:.82;transition:.25s}.nav a:hover{opacity:1;color:var(--gold)}
+.menu{display:none;border:1px solid #ffffff44;background:#ffffff12;color:white;border-radius:30px;padding:8px 12px}
+.hero{min-height:100svh;display:grid;place-items:center;text-align:center;padding:110px 22px 70px;position:relative;isolation:isolate;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(3px);z-index:-1;pointer-events:none}
+.hero:before{width:min(78vw,680px);height:min(78vw,680px);border:1px solid #ffd5e426;box-shadow:0 0 100px #ed9bc51b,inset 0 0 90px #ed9bc514;animation:slowspin 55s linear infinite}
+.hero:after{width:min(58vw,470px);height:min(58vw,470px);border:1px solid #f6d8ad22;box-shadow:0 0 90px #f3c5d51c}
+@keyframes slowspin{to{transform:rotate(360deg)}}
+.moon{position:absolute;right:12%;top:17%;width:74px;height:74px;border-radius:50%;background:#ffe8c8;box-shadow:0 0 28px #ffe8c8a6,0 0 90px #f8d3a94a;opacity:.85}
+.moon:after{content:"";position:absolute;left:-13px;top:-8px;width:72px;height:72px;border-radius:50%;background:#30203c}
+.hero-inner{max-width:850px;position:relative;z-index:2}
+.eyebrow{font-size:11px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);margin-bottom:24px}
+.crown{font-size:42px;display:block;margin-bottom:16px;filter:drop-shadow(0 0 16px #ffdca8aa);animation:float 3.6s ease-in-out infinite}
+h1{font-family:"Playfair Display",serif;font-weight:500;font-size:clamp(48px,9vw,104px);line-height:.98;margin:0;color:#fff0f5;text-shadow:0 8px 40px #f6b9d32c}
+h1 em{font-weight:500;color:#f8bfd4}
+.script{font-family:"Great Vibes",cursive;font-size:clamp(35px,6vw,60px);color:#f5c4d7;margin:18px 0 12px}
+.hero p{max-width:560px;margin:0 auto;color:#f1dce9;line-height:1.9;font-size:14px}
+.cta{display:inline-flex;align-items:center;gap:10px;margin-top:30px;padding:14px 24px;border-radius:40px;background:linear-gradient(110deg,#f4b4ce,#f7d9b3);color:#38223d;font-weight:700;font-size:12px;letter-spacing:.1em;box-shadow:0 12px 35px #ed9bc53b;transition:.25s}
+.cta:hover{transform:translateY(-3px);box-shadow:0 17px 42px #ed9bc55a}
+.scrollhint{position:absolute;bottom:25px;left:50%;transform:translateX(-50%);font-size:9px;letter-spacing:.25em;color:#d9b9ce;text-transform:uppercase}
+.scrollhint:after{content:"";display:block;width:1px;height:28px;background:linear-gradient(var(--rose),transparent);margin:10px auto 0}
+.petal{position:absolute;top:-30px;width:10px;height:15px;border-radius:90% 0 90% 0;background:linear-gradient(135deg,#ffd9e6,#d87ca7);opacity:.65;animation:fall linear infinite;pointer-events:none}
+@keyframes fall{to{transform:translate3d(var(--drift),110vh,0) rotate(620deg);opacity:.05}}
+@keyframes float{50%{transform:translateY(-10px) rotate(4deg)}}
+section{padding:100px 22px;position:relative}
+.wrap{width:min(100%,1000px);margin:auto}
+.section-tag{text-align:center;color:var(--gold);font-size:10px;letter-spacing:.3em;text-transform:uppercase;margin-bottom:15px}
+.section-title{text-align:center;font:500 clamp(34px,5vw,54px)/1.12 "Playfair Display",serif;margin:0 0 18px;color:#fff0f5}
+.section-title em{color:#f5b9d0}
+.section-lead{text-align:center;max-width:620px;margin:0 auto 44px;color:#e8cede;line-height:1.9;font-size:13px}
+.letter-card{max-width:760px;margin:auto;padding:clamp(28px,6vw,58px);border:1px solid #f5c7dc42;border-radius:26px;background:linear-gradient(135deg,#ffffff13,#ffffff06);box-shadow:0 25px 80px #100a1a55,inset 0 1px #ffffff24;position:relative;overflow:hidden}
+.letter-card:before{content:"♡";position:absolute;right:25px;top:0;font:150px "Playfair Display",serif;color:#f6c5d414}
+.letter-card .hello{font:italic 28px "Playfair Display",serif;color:#f6c5d8;margin-bottom:18px}
+.letter-card p{position:relative;color:#f1deea;line-height:2;font-size:14px;margin:0 0 16px}
+.signature{font:36px "Great Vibes",cursive;color:#f5c2d6;margin-top:24px}
+.reasons{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.reason{min-height:155px;padding:22px 17px;border:1px solid #f5c7dc30;border-radius:20px;background:var(--glass);text-align:center;backdrop-filter:blur(8px);transition:.3s}
+.reason:hover{transform:translateY(-6px);background:#ffffff16;border-color:#f5c7dc66}
+.reason .ico{font-size:25px;margin-bottom:13px}
+.reason h3{font:500 17px "Playfair Display",serif;color:#ffe9f1;margin:0 0 8px}
+.reason p{font-size:11px;color:#ddc7d7;line-height:1.7;margin:0}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.photo{aspect-ratio:4/5;border:1px solid #f7d3e04c;border-radius:18px;overflow:hidden;position:relative;background:linear-gradient(145deg,#76506c,#35213e);cursor:pointer;box-shadow:0 15px 35px #100a1a55}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .7s}
+.photo:hover img{transform:scale(1.07)}
+.photo:after{content:"♡";position:absolute;right:12px;bottom:8px;color:#fff;font-size:22px;text-shadow:0 2px 10px #000}
+.photo .missing{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:14px;color:#f8dbe8;font:italic 17px "Playfair Display",serif}
+.photo img:not([src=""]){position:relative;z-index:1}
+.wish{background:radial-gradient(ellipse at center,#75425f66,transparent 65%);text-align:center}
+.wish-box{max-width:760px;margin:auto;padding:45px 24px;border-radius:28px;border:1px solid #f4c7d83d;background:#ffffff09;box-shadow:0 20px 70px #120b1d55}
+.wish-box .big-heart{font-size:36px;animation:float 3s infinite}
+.wish-box p{color:#f0dce8;line-height:2;font-size:14px;max-width:570px;margin:20px auto}
+.wish-box h2{font:500 clamp(32px,6vw,56px) "Playfair Display",serif;color:#ffeaf1;margin:12px 0}
+.wish-box .forever{font:36px "Great Vibes",cursive;color:#f6bfd4}
+footer{text-align:center;padding:32px 20px 42px;color:#c9adc1;font-size:10px;letter-spacing:.12em}
+footer span{color:#f2b7d0}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.visible{opacity:1;transform:none}
+.lightbox{position:fixed;inset:0;z-index:50;background:#100a18ed;display:none;place-items:center;padding:22px}
+.lightbox.open{display:grid}
+.lightbox img{max-width:min(92vw,780px);max-height:82vh;object-fit:contain;border-radius:14px;box-shadow:0 20px 70px #0009}
+.close{position:absolute;right:22px;top:18px;border:1px solid #ffffff55;background:#ffffff18;color:white;border-radius:50%;width:42px;height:42px;font-size:22px;cursor:pointer}
+@media(max-width:700px){.nav{display:none;position:absolute;right:5vw;top:58px;padding:17px 20px;border:1px solid #ffffff2c;border-radius:16px;background:#281934f5;flex-direction:column;gap:17px}.nav.show{display:flex}.menu{display:block}.moon{right:7%;top:13%;width:52px;height:52px}.moon:after{width:50px;height:50px}.reasons{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr);gap:10px}.photo{aspect-ratio:4/5}section{padding:78px 18px}.hero{padding-top:100px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+.page-nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:34px auto 0}
+.page-nav a{display:inline-flex;align-items:center;justify-content:center;min-width:145px;padding:12px 18px;border:1px solid #f5c7dc55;border-radius:30px;background:#ffffff0c;color:#ffe8f1;font-size:11px;letter-spacing:.08em;transition:.25s}
+.page-nav a:hover{background:#ffffff1b;transform:translateY(-3px);border-color:#f5c7dc99}
+.page-shell{min-height:100svh;display:flex;flex-direction:column}
+.page-shell main{width:100%;flex:1;display:block;min-width:0}
+.page-shell main>section{width:100%;min-width:0}
+.page-shell main .wrap{width:min(100%,1000px);margin-left:auto;margin-right:auto}
+.page-shell main .letter-card,.page-shell main .wish-box{width:100%;max-width:760px;margin-left:auto;margin-right:auto}
+.page-shell main .page-nav{width:min(100% - 36px,760px);margin:30px auto 40px}
+@media(max-width:700px){
+ .page-shell main .wrap{width:100%}
+ .page-shell main .letter-card,.page-shell main .wish-box{width:100%}
+ .page-shell main .section-title{overflow-wrap:normal}
+}
+
+.single-photo{width:min(100%,430px);aspect-ratio:4/5;margin:0 auto 30px;border:1px solid #f5c7dc66;border-radius:22px;overflow:visible;position:relative;background:linear-gradient(145deg,#76506c,#35213e);box-shadow:0 18px 50px #100a1a66}
+.single-photo img{position:absolute;inset:0;display:block;width:100%;height:100%;object-fit:cover;object-position:center center;border-radius:inherit;z-index:1}
+.single-photo .photo-placeholder{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;color:#f8dbe8;font:italic 21px 'Playfair Display',serif;pointer-events:none}
+
+.page-nav{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:34px auto 0}
+.page-nav a{display:inline-flex;align-items:center;justify-content:center;min-width:145px;padding:12px 18px;border:1px solid #f5c7dc55;border-radius:30px;background:#ffffff0c;color:#ffe8f1;font-size:11px;letter-spacing:.08em;transition:.25s}
+.page-nav a:hover{background:#ffffff1b;transform:translateY(-3px);border-color:#f5c7dc99}
+
+.page-shell main{width:100%;flex:1;display:block;min-width:0}
+.page-shell main>section{width:100%;min-width:0}
+.page-shell main .wrap{width:min(100%,1000px);margin-left:auto;margin-right:auto}
+.page-shell main .letter-card,.page-shell main .wish-box{width:100%;max-width:760px;margin-left:auto;margin-right:auto}
+@media(max-width:700px){
+ .page-shell main .wrap{width:100%}
+ .page-shell main .letter-card,.page-shell main .wish-box{width:100%}
+ .single-photo{width:min(100%,360px)}
+}
+
+.photo-title{font:italic clamp(34px,7vw,48px) "Playfair Display",serif;color:#f5bfd4;text-align:center;margin:0 auto 15px;text-shadow:0 5px 24px #f5a9c633}
+.single-photo{position:relative;isolation:isolate;min-height:320px}
+.single-photo .photo-crown{position:absolute;z-index:3;top:-30px;left:-20px;width:70px;height:56px;transform:rotate(-24deg);filter:drop-shadow(0 0 8px #f8d9a8cc) drop-shadow(0 4px 10px #0006);pointer-events:none;animation:crownGlow 3.6s ease-in-out infinite}
+.single-photo .photo-crown svg{display:block;width:100%;height:100%}
+@keyframes crownGlow{50%{filter:drop-shadow(0 0 16px #ffe2b0) drop-shadow(0 4px 10px #0006)}}
+.love-you-lines{display:grid;gap:12px;margin:30px auto 24px;color:#f6c3d8;font:clamp(23px,5vw,31px) "Great Vibes",cursive;line-height:1.35;text-align:center}
+.love-you-lines div{animation:loveGlow 3.8s ease-in-out infinite}
+.love-you-lines div:nth-child(even){animation-delay:1.2s}
+@keyframes loveGlow{0%,100%{text-shadow:0 0 5px #f5a9c622;opacity:.88}50%{text-shadow:0 0 18px #f5a9c699;opacity:1}}
+.signoff{margin-top:20px;color:#e9d2df;font-size:12px;letter-spacing:.16em;text-transform:uppercase;text-align:center}
+.signoff span{display:block;margin-top:8px;color:#f6c3d8;font:42px "Great Vibes",cursive;letter-spacing:0;text-transform:none}
+footer strong{display:inline-block;margin-top:10px;color:#f6c3d8;font-weight:600;letter-spacing:.18em}
+
+
+/* Animated password welcome screen */
+#princessGate{position:fixed;inset:0;z-index:1000;display:grid;place-items:center;padding:24px;background:
+ radial-gradient(ellipse at 18% 15%,#76456f 0,transparent 42%),
+ radial-gradient(ellipse at 85% 80%,#5a3155 0,transparent 38%),
+ linear-gradient(145deg,#1b1028,#35203f 58%,#1b132b);transition:opacity .85s ease,visibility .85s ease;overflow:hidden}
+#princessGate.unlocked{opacity:0;visibility:hidden;pointer-events:none}
+.gate-card{width:min(100%,430px);position:relative;z-index:2;text-align:center;padding:38px 26px 32px;border:1px solid #f5c7dc55;border-radius:28px;background:linear-gradient(135deg,#ffffff19,#ffffff08);box-shadow:0 25px 90px #10081788,inset 0 1px #ffffff33;backdrop-filter:blur(12px)}
+.gate-crown{font-size:54px;color:#ffe2b1;text-shadow:0 0 12px #ffe0a6aa;animation:none}
+.gate-kicker{font-size:10px;letter-spacing:.3em;color:#f4d6a5;text-transform:uppercase;margin:17px 0 12px}
+.gate-title{font:500 clamp(38px,9vw,55px)/1.1 "Playfair Display",serif;color:#fff0f5;margin:0}
+.gate-title em{color:#f5b9d0}
+.gate-sub{font-size:13px;color:#ecd6e4;line-height:1.8;margin:17px auto 24px;max-width:290px}
+.gate-input{width:100%;padding:15px 18px;border-radius:40px;border:1px solid #f6c8dc77;background:#ffffff12;color:#fff;text-align:center;font:600 17px "DM Sans",sans-serif;letter-spacing:.3em;outline:none}
+.gate-input::placeholder{color:#d8bbce;letter-spacing:.12em;font-size:12px}
+.gate-input:focus{border-color:#f7d7a9;box-shadow:0 0 0 3px #f5c7dc22}
+.gate-button{width:100%;margin-top:14px;border:0;border-radius:40px;padding:15px 20px;background:linear-gradient(110deg,#f4b4ce,#f7d9b3);color:#38223d;font-weight:700;font-size:12px;letter-spacing:.12em;cursor:pointer;box-shadow:0 12px 35px #ed9bc53b;transition:.25s}
+.gate-button:hover{transform:translateY(-2px);box-shadow:0 16px 42px #ed9bc55a}
+.gate-error{min-height:20px;margin:12px 0 0;color:#ffc0d0;font-size:12px}
+.gate-hearts{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.gate-heart{position:absolute;bottom:-50px;color:#ffc5db;opacity:0;animation:gateRise linear infinite;text-shadow:0 0 15px #f5a9c677}
+@keyframes gateRise{0%{transform:translateY(0) rotate(0) scale(.7);opacity:0}15%{opacity:.55}85%{opacity:.45}100%{transform:translateY(-115vh) rotate(35deg) scale(1.2);opacity:0}}
+body.gate-locked{overflow:hidden}
+@media(prefers-reduced-motion:reduce){#princessGate:before,#princessGate:after,.gate-crown,.gate-heart{animation:none!important}}
+
+
+/* Soft floating hearts behind the full website */
+#heartField{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+body.gate-locked #heartField{display:none}
+.page-shell{position:relative;z-index:1}
+.bg-heart{position:absolute;bottom:-55px;color:#f7b9d2;opacity:0;text-shadow:0 0 15px #f2a6c755;animation:heartDrift linear infinite}
+@keyframes heartDrift{0%{transform:translate3d(0,0,0) rotate(-12deg) scale(.7);opacity:0}12%{opacity:.22}80%{opacity:.18}100%{transform:translate3d(var(--side),-115vh,0) rotate(28deg) scale(1.15);opacity:0}}
+@media(prefers-reduced-motion:reduce){.bg-heart{animation:none!important;display:none}}
+
+
+.heart-unlock{position:relative;display:block;width:104px;height:96px;margin:18px auto 4px;border:0;background:transparent;cursor:pointer;padding:0;touch-action:manipulation}
+.heart-shape{position:absolute;inset:0;display:grid;place-items:center;color:#f7bfd4;font:100px/1 Arial,sans-serif;text-shadow:0 5px 22px #f3a8c877;transition:transform .2s ease,color .2s ease}
+.heart-label{position:absolute;inset:0;display:grid;place-items:center;padding-top:8px;color:#43253e;font:700 10px "DM Sans",sans-serif;letter-spacing:.12em}
+.heart-unlock:active .heart-shape{transform:scale(.9);color:#ffe0b5}
+.heart-unlock:focus-visible{outline:2px solid #f7d9b3;outline-offset:5px;border-radius:18px}
+.gate-card{transform:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+#princessGate{transform:translateZ(0);-webkit-transform:translateZ(0)}
+.gate-hearts{z-index:1}
+.gate-heart{will-change:transform,opacity}
+@media(max-height:700px){.gate-card{padding:24px 22px}.gate-crown{font-size:44px}.gate-sub{margin:12px auto 18px}}
+
+</style>
+</head>
+<body class="gate-locked">
+
+<div id="princessGate" aria-label="Princess welcome screen">
+  <div class="gate-hearts" id="gateHearts" aria-hidden="true"></div>
+  <div class="gate-card">
+    <div class="gate-crown">♕</div>
+    <div class="gate-kicker">A little surprise awaits</div>
+    <h1 class="gate-title">Welcome,<br><em>My Princess</em></h1>
+    <p class="gate-sub">A tiny world made with love, just for you. Enter your special code to open it. ♡</p>
+    <form id="gateForm">
+      <input class="gate-input" id="gatePassword" type="password" inputmode="numeric" autocomplete="off" maxlength="12" placeholder="ENTER YOUR SECRET CODE" aria-label="Secret code">
+      <button class="heart-unlock" type="submit" aria-label="Unlock your surprise">
+        <span class="heart-shape" aria-hidden="true">♥</span>
+        <span class="heart-label">OPEN</span>
+      </button>
+      <div class="gate-error" id="gateError" aria-live="polite"></div>
+    </form>
+  </div>
+</div>
+<div id="heartField" aria-hidden="true"></div>
+
+<div class="page-shell">
+<header class="topbar">
+  <a class="brand" href="#home">A LITTLE <span>UNIVERSE</span> ♡</a>
+  <button class="menu" id="menuBtn" aria-label="Open navigation">☰</button>
+  <nav class="nav" id="nav">
+    <a href="#home">For My Princess</a>
+    <a href="#letter">You Make My Day</a>
+    <a href="#wish">Keep Shining</a>
+  </nav>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="moon"></div>
+  <div class="hero-inner">
+    <span class="crown">♕</span>
+    <div class="eyebrow">18 November · National Princess Day</div>
+    <h1>For My <em>Princess</em></h1>
+    <div class="script">My Dear Salina ♡</div>
+    <p>Some people make the world feel softer just by being in it. Today, this little universe is all yours.</p>
+  </div>
+  <div class="scrollhint">A little further</div>
+</section>
+<section id="letter">
+ <div class="wrap reveal">
+  <div class="photo-title">My Princess</div>
+  <div class="single-photo">
+    <div class="photo-placeholder">♡</div>
+    <img id="salinaImg" src="salina.jpg" alt="My Princess Salina">
+    <div class="photo-crown" aria-hidden="true">
+      <svg viewBox="0 0 70 56" xmlns="http://www.w3.org/2000/svg">
+        <defs><linearGradient id="tiaraGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0c8"/><stop offset=".55" stop-color="#f5d49a"/><stop offset="1" stop-color="#e0a95f"/></linearGradient></defs>
+        <path d="M6 44 L10 20 L22 32 L35 8 L48 32 L60 20 L64 44 Q35 52 6 44 Z" fill="url(#tiaraGold)" stroke="#fff6dc" stroke-width="1.2" stroke-linejoin="round"/>
+        <path d="M9 41 Q35 49 61 41" fill="none" stroke="#e0a95f" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="35" cy="7" r="4" fill="#ffd1e2" stroke="#fff6dc" stroke-width="1"/>
+        <circle cx="10" cy="19" r="3" fill="#ffd1e2" stroke="#fff6dc" stroke-width="1"/>
+        <circle cx="60" cy="19" r="3" fill="#ffd1e2" stroke="#fff6dc" stroke-width="1"/>
+        <path d="M35 28 C31 23 26 27 31 32 L35 36 L39 32 C44 27 39 23 35 28 Z" fill="#f08db4" stroke="#fff6dc" stroke-width=".8"/>
+        <circle cx="21" cy="40" r="2" fill="#fff6dc"/><circle cx="49" cy="40" r="2" fill="#fff6dc"/>
+      </svg>
+    </div>
+  </div>
+  <div class="section-tag">A note from my heart</div>
+  <h2 class="section-title">You Make<br><em>My Day</em></h2>
+  <div class="letter-card">
+   <div class="hello">My Dear Salina,</div>
+   <p>Happy National Princess Day, meri princess! 👑</p>
+   <p>You don't need a crown to be special. The way you bring happiness into my days is more than enough to make you feel like a princess.</p>
+   <p>Even from miles away, you have a beautiful place in my heart. I hope life gives you countless reasons to smile, dreams that come true, and little moments that make you feel truly loved.</p>
+   <p>Today is a reminder that you deserve kindness, happiness, respect, and all the beautiful things life can offer.</p>
+   <div class="signature">Always cheering for you ♡</div>
+  </div>
+ </div>
+</section>
+<section class="wish" id="wish">
+ <div class="wrap reveal">
+  <div class="wish-box">
+   <div class="big-heart">💖</div>
+   <div class="section-tag">Today and every day</div>
+   <h2>Keep shining, Princess</h2>
+   <p>May your days be filled with peaceful moments, unexpected happiness, beautiful opportunities, and people who remind you how precious you are. Never stop believing in the magic waiting ahead of you.</p>
+   <div class="forever">You deserve the whole universe ♡</div>
+   <div class="love-you-lines" aria-label="Love you, Madam Jiiiiiii">
+    <div>Love you, Madam Jiiiiiii 🌹</div>
+    <div>Love you, Madam Jiiiiiii 🌹</div>
+    <div>Love you, Madam Jiiiiiii 🌹</div>
+    <div>Love you, Madam Jiiiiiii 🌹</div>
+    <div>Love you, Madam Jiiiiiii 🌹</div>
+    <div>Love you, Madam Jiiiiiii 🌹</div>
+   </div>
+   <div class="signoff">Yours, <span>Sir Jii ❤️</span></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer>MADE WITH <span>♡</span> FOR MY PRINCESS<br><strong>— SIR JII ❤️</strong></footer>
+</div>
+<script>
+const menuBtn=document.getElementById('menuBtn'),nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('show'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
+
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+ if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}
+}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+
+const reduceMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduceMotion){
+ for(let i=0;i<22;i++){
+  const petal=document.createElement('i');petal.className='petal';
+  petal.style.left=Math.random()*100+'%';
+  petal.style.animationDuration=(12+Math.random()*18)+'s';
+  petal.style.animationDelay=(-Math.random()*25)+'s';
+  petal.style.setProperty('--drift',(Math.random()*150-75)+'px');
+  petal.style.opacity=(.25+Math.random()*.5);
+  document.body.appendChild(petal);
+ }
+}
+
+// If the photo file is missing, hide the broken image icon
+document.getElementById('salinaImg').addEventListener('error',function(){this.style.display='none'});
+
+// Princess password screen. This is a front-end surprise gate, not strong security.
+(function(){
+ const gate=document.getElementById('princessGate');
+ const form=document.getElementById('gateForm');
+ const field=document.getElementById('gatePassword');
+ const error=document.getElementById('gateError');
+ const PASSCODE='0143';
+ const hearts=document.getElementById('gateHearts');
+ const heartField=document.getElementById('heartField');
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(!reduce){
+   for(let i=0;i<18;i++){
+     const h=document.createElement('span');h.className='gate-heart';h.textContent=i%2===0?'♥':'♡';
+     h.style.left=(Math.random()*100)+'%';
+     h.style.animationDuration=(10+Math.random()*12)+'s';
+     h.style.animationDelay=(-Math.random()*18)+'s';
+     h.style.fontSize=(15+Math.random()*22)+'px';
+     hearts.appendChild(h);
+   }
+   for(let i=0;i<14;i++){
+     const h=document.createElement('span');h.className='bg-heart';h.textContent=i%3===0?'♥':'♡';
+     h.style.left=(Math.random()*100)+'%';
+     h.style.animationDuration=(15+Math.random()*18)+'s';
+     h.style.animationDelay=(-Math.random()*28)+'s';
+     h.style.fontSize=(13+Math.random()*20)+'px';
+     h.style.setProperty('--side',(Math.random()*120-60)+'px');
+     heartField.appendChild(h);
+   }
+ }
+ form.addEventListener('submit',function(e){
+   e.preventDefault();
+   if(field.value===PASSCODE){
+     error.textContent='';
+     gate.classList.add('unlocked');
+     document.body.classList.remove('gate-locked');
+     setTimeout(()=>gate.remove(),900);
+   }else{
+     error.textContent='That code is not quite right. Try again, Princess. ♡';
+     field.value='';
+     field.focus();
+   }
+ });
+ field.focus({preventScroll:true});
+})();
+
+</script>
+</body>
+</html>
